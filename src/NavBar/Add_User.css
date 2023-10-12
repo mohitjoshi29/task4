@@ -1,0 +1,14 @@
+#contn-form{
+    width: 800px;
+    margin-top: 50px;
+    align-items: center;
+    background-color: white;
+}
+@media only screen and (max-width: 600px) {
+    #contn-form{
+        width: 300px;
+        margin-top: 50px;
+        align-items: left;
+        background-color: white;
+    }
+  }

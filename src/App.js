@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './NavBar/Navbar';
+import Add_User from './NavBar/Add_User';
+import User_Data from './NavBar/User_Data'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Class_formsLocal from './Class_fomsLocalSto/Class_formsLocal';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='container-fluid'>
+        <br />
+        <div className='container'>
+          <BrowserRouter>
+            <Navbar />
+            <hr />
+
+            <Routes>
+              <Route path='/' element={<Add_User />} />
+              <Route path='/user_data' element={<User_Data />} />
+            </Routes>
+          </BrowserRouter>
+        </div>
+      </div >
+      <Class_formsLocal/>
+    </>
   );
 }
 
